@@ -1,1 +1,10 @@
-<h1 style = 'text-align: center'>Hello world</h1>
+<form action="/users" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="email">Email</label>
+  <input type="email" name="user[email]" id="email">
+  <label for="username">Username</label>
+  <input type="text" name="user[username]" id="username">
+  <label for="password">Password</label>
+  <input type="password" name="user[password]" id="password">
+  <input type="submit" value="Submit">
+</form>
