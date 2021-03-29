@@ -1,4 +1,4 @@
-<!--<form action="/users" method="post" accept-charset="UTF-8">
+  <!--<form action="/users" method="post" accept-charset="UTF-8">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="email">Email</label>
   <input type="email" name="user[email]" id="email">
@@ -18,16 +18,9 @@
     <%= password_field_tag(:password) %>
     <%= submit_tag("Submit") %>
   <% end %>-->
-
-  <% if @user.errors.any?%>
-    <h6><%= pluralize(@user.errors.count, "error") %> prohibited this post from being saved:</h6>
-    <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><span style="color:red"><%= msg %></span></li>
-      <% end %>
-  </ul>
-  <%end%>
-
+  
+  <%= render "helper", user: @user %>
+  
   <%= form_with(model: @user, method: "POST") do |form| %>
     <%= label_tag(:email, "Email") %>
     <%= form.email_field(:email, placeholder: "ex: johndoe@example.com") %>
