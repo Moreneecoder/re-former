@@ -23,9 +23,9 @@ class UsersController < ApplicationController
 
     if @user.valid?
       @user.update(user_params)
+      p @user
       redirect_to edit_user_path
     else
-      p @user.errors.full_messages
       render :edit
     end
   end
