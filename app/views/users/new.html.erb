@@ -1,12 +1,5 @@
-  <% if @user.errors.any?%>
-    <h6><%= pluralize(@user.errors.count, "error") %> prohibited this post from being saved:</h6>
-    <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><span style="color:red"><%= msg %></span></li>
-      <% end %>
-  </ul>
-  <%end%>
-
+  <%= render "helper", user: @user %>
+  
   <%= form_with(model: @user, method: "POST") do |form| %>
     <%= label_tag(:email, "Email") %>
     <%= form.email_field(:email, placeholder: "ex: johndoe@example.com") %>
