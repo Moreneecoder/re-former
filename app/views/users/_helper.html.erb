@@ -1,8 +1,0 @@
-<% if user.errors.any?%>
-    <h6><%= pluralize(user.errors.count, "error") %> prohibited this post from being saved:</h6>
-    <ul>
-      <% user.errors.full_messages.each do |msg| %>
-        <li><span style="color:red"><%= msg %></span></li>
-      <% end %>
-  </ul>
-  <%end%>
