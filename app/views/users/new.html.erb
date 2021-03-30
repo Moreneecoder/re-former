@@ -1,3 +1,4 @@
+  
   <!--<form action="/users" method="post" accept-charset="UTF-8">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="email">Email</label>
@@ -19,7 +20,8 @@
     <%= submit_tag("Submit") %>
   <% end %>-->
   
-  <%= render "helper", user: @user %>
+  <%# <%= render "helper", user: @user %> %>
+  <%= new_error_helper(@user) %>
   
   <%= form_with(model: @user, method: "POST") do |form| %>
     <%= label_tag(:email, "Email") %>
