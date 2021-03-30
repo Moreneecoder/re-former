@@ -1,6 +1,7 @@
 <% 
-=begin %> 
-<type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+=begin %>
+<form action="/users" method="post" accept-charset="UTF-8">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="email">Email</label>
   <input type="email" name="user[email]" id="email">
   <label for="username">Username</label>
