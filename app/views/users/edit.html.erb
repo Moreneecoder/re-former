@@ -10,7 +10,11 @@
   <input type="password" name="user[password]" id="password">
   <input type="submit" value="Submit">
 </form>
+  <%
+=end%>
 
+<%
+=begin %>
 <%= form_tag("/users", method: "POST") do %>
     <%= label_tag(:email, "Email") %>
     <%= email_field_tag(:email) %>

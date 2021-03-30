@@ -1,5 +1,6 @@
 <% 
-=begin %> <type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+=begin %> 
+<type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="email">Email</label>
   <input type="email" name="user[email]" id="email">
   <label for="username">Username</label>
@@ -8,7 +9,11 @@
   <input type="password" name="user[password]" id="password">
   <input type="submit" value="Submit">
 </form>
+<% 
+=end %>
 
+<% 
+=begin %>
 <%= form_tag("/users", method: "POST") do %>
     <%= label_tag(:email, "Email") %>
     <%= email_field_tag(:email) %>
